@@ -1,1 +1,62 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Skip to Main Content Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 10px;
+}
+
+/* Navigation Styling */
+nav {
+    display: inline-block;
+    width: 80%;
+    background-color: #333;
+    padding: 10px;
+}
+
+/* Style only images inside nav */
+nav img {
+    width: 10%;
+}
+
+/* Commented out existing li styling */
+/* li {
+    display: block;
+    width: 100px;
+} */
+
+/* Grid Class - Two Column Layout */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+
+/* Style only images in .grid */
+.grid img {
+    width: 100%;
+}
+
+/* Flexbox Styling */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
