@@ -2,54 +2,86 @@
 body {
     font-family: Arial, sans-serif;
     font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
 }
 
-/* Skip to Main Content Link */
+/* Skip to Main Content - Visible Only on Focus */
 .skip-link {
     position: absolute;
     top: -40px;
     left: 10px;
-    background: #000;
-    color: #fff;
-    padding: 10px;
+    background: #007BFF;
+    color: white;
+    padding: 10px 15px;
     z-index: 100;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: top 0.3s;
 }
 
 .skip-link:focus {
     top: 10px;
 }
 
-/* Navigation Styling */
+/* Navigation Styling - Accessible and Responsive */
 nav {
-    display: inline-block;
-    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: #333;
+    padding: 15px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
     padding: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-/* Style only images inside nav */
+nav ul li a:hover,
+nav ul li a:focus {
+    background: #007BFF;
+}
+
+/* Navigation Logo */
 nav img {
-    width: 10%;
+    width: 50px;
+    height: auto;
 }
 
-/* Commented out existing li styling */
-/* li {
-    display: block;
-    width: 100px;
-} */
-
-/* Grid Class - Two Column Layout */
+/* Grid Layout */
 .grid {
     display: grid;
-    grid-template-columns: 40% 40%;
-    justify-content: center;
-    align-items: center;
-    row-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Style only images in .grid */
+/* Style Images in Grid */
 .grid img {
     width: 100%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Flexbox Styling */
@@ -58,5 +90,37 @@ nav img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    padding: 20px;
 }
 
+/* Box Model Enhancements */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}
